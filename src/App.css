@@ -1,20 +1,57 @@
-.App {
-  text-align: center;
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1890ff; /* Fallback color */
+  background: linear-gradient(90deg, #1890ff, #f5222d, #52c41a, #faad14);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shinyGlowLine 10s infinite;
+  user-select: none;
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@keyframes shinyGlowLine {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.logo2 {
+ 
+  font-size: 24px;
+  font-weight: bold;
+  color: #1890ff; /* Initial color */
+  animation: shinyGlow 5s infinite;
+  user-select: none;
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+  background-clip: text;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes shinyGlow {
+  0%, 100% {
+    text-shadow: 0 0 5px #1890ff, 0 0 10px #1890ff, 0 0 20px #1890ff, 0 0 40px #1890ff;
+  }
+  25% {
+    text-shadow: 0 0 5px #f5222d, 0 0 10px #f5222d, 0 0 20px #f5222d, 0 0 40px #f5222d;
+  }
+  50% {
+    text-shadow: 0 0 5px #52c41a, 0 0 10px #52c41a, 0 0 20px #52c41a, 0 0 40px #52c41a;
+  }
+  75% {
+    text-shadow: 0 0 5px #faad14, 0 0 10px #faad14, 0 0 20px #faad14, 0 0 40px #faad14;
   }
 }
 
 .App-header {
-  background-color: #282c34;
+ 
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +72,59 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.layout .desktop-menu {
+  display: flex;
+}
+
+.layout .mobile-menu-button {
+  display: none;
+}
+
+.content {
+  flex: 1; /* This allows the content to expand and take up any available space, pushing the footer down */
+  overflow: auto; /* Adds scroll to content only if necessary */
+  padding: 24px 50px; /* Adjust padding as needed */
+}
+
+.footer {
+  text-align: center; /* Centers the footer text */
+  padding: 10px 50px; /* Padding for aesthetic spacing */
+}
+@media (max-width: 768px) {
+  .layout .desktop-menu {
+    display: none;
+  }
+
+  .layout .mobile-menu-button {
+    display: flex;
+  }
+  .content {
+    padding: 0;
+    margin-top: 0;
+  }
+  .footer {
+    text-align: center; /* Centers the footer text */
+    padding: 0; /* Padding for aesthetic spacing */
+  }
+}
+
+.personal-card,
+.education-card,
+.experience-card,
+.skills-card {
+  transition: transform 0.3s;
+}
+
+.personal-card:hover,
+.education-card:hover,
+.experience-card:hover,
+.skills-card:hover {
+  transform: scale(1.02);
+}
+
+.skills-section{
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
