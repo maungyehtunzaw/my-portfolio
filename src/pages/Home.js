@@ -1,9 +1,10 @@
 import React from 'react';
 import { Row, Col, Image, Button, Divider, Badge } from 'antd';
-import { LinkedinFilled, GithubFilled, MailOutlined, AppstoreOutlined, CodeOutlined, ProfileOutlined, BookOutlined } from '@ant-design/icons';
-import { Typography, Card } from 'antd';
+import { LinkedinFilled, GithubFilled, MailOutlined } from '@ant-design/icons';
+import { Typography } from 'antd';
 import logoImage from '../assets/logo/yehtunz.JPG';
 import { useTheme } from '../context/themeContext';
+import CoreConceptSection from './components/CoreConcepts';
 const { Title, Paragraph } = Typography;
 function Home() {
   const { theme } = useTheme();
@@ -48,58 +49,8 @@ function Home() {
     <Divider type="horizontal" orientation="center" orientationMargin={20}>
       <Title level={3} style={{ color: theme.textColor }}>Story, Works and Blogs</Title>
     </Divider>
-    <section className="skills-section">
-      <Row justify="center" gutter={[16, 16]}>
-        <Col xs={24} sm={24} md={12} lg={6}>
-          <Card
-            title="Work & Projects"
-            bordered={false}
-            hoverable
-            style={{ backgroundColor: theme.cardBackgroundColor }}
-            onClick={() => window.location.href = '/projects'}
-            cover={<AppstoreOutlined style={{ fontSize: '48px', color: '#1890ff', textAlign: 'center', padding: '20px' }} />}
-          >
-            <p style={{ color: theme.textColor }}>Some of the things I've developed</p>
-          </Card>
-        </Col>
-        <Col xs={24} sm={24} md={12} lg={6}>
-          <Card
-            title="Developer Story"
-            bordered={false}
-            hoverable
-            style={{ backgroundColor: theme.cardBackgroundColor }}
-            onClick={() => window.location.href = '/story'}
-            cover={<CodeOutlined style={{ fontSize: '48px', color: '#52c41a', textAlign: 'center', padding: '20px' }} />}
-          >
-            <p style={{ color: theme.textColor }}>My career timeline as a developer.</p>
-          </Card>
-        </Col>
-        <Col xs={24} sm={24} md={12} lg={6}>
-          <Card
-            title="Resume"
-            bordered={false}
-            hoverable
-            style={{ backgroundColor: theme.cardBackgroundColor }}
-            onClick={() => window.location.href = '/resume'}
-            cover={<ProfileOutlined style={{ fontSize: '48px', color: '#eb2f96', textAlign: 'center', padding: '20px' }} />}
-          >
-            <p style={{ color: theme.textColor }}>Just a summary for you to see.</p>
-          </Card>
-        </Col>
-        <Col xs={24} sm={24} md={12} lg={6}>
-          <Card
-            title="Blogs"
-            bordered={false}
-            hoverable
-            style={{ backgroundColor: theme.cardBackgroundColor }}
-            onClick={() => window.location.href = '/blogs'}
-            cover={<BookOutlined style={{ fontSize: '48px', color: '#faad14', textAlign: 'center', padding: '20px' }} />}
-          >
-            <p style={{ color: theme.textColor }}>I'm planning to start a blog.</p>
-          </Card>
-        </Col>
-      </Row>
-    </section>
+    <CoreConceptSection/>
+    
   </div>
  
   );

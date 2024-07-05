@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import { Routes, Route, Link,useLocation } from 'react-router-dom';
-import { Layout, Menu, Drawer, Button,Typography, Switch} from 'antd';
-import { MoonOutlined,SunOutlined,PictureOutlined, HomeOutlined, ProjectOutlined, FileTextOutlined, MailOutlined, BulbOutlined, AppstoreTwoTone ,FacebookFilled,InstagramFilled,YoutubeFilled,GithubFilled,LinkedinFilled } from '@ant-design/icons';
+import { Layout, Menu, Drawer, Button,Typography} from 'antd';
+import { FileDoneOutlined,PictureOutlined, HomeOutlined, ProjectOutlined, FileTextOutlined, MailOutlined, BulbOutlined, AppstoreTwoTone ,FacebookFilled,InstagramFilled,YoutubeFilled,GithubFilled,LinkedinFilled } from '@ant-design/icons';
 import AboutMe from './pages/AboutMe';
 import Projects from './pages/Projects';
 import Resume from './pages/Resume';
@@ -16,6 +16,7 @@ import { AnimatePresence, motion } from "framer-motion"
 import { getRandomAnimation } from './util/animationUtil';
 import { lightTheme, darkTheme, purpleTheme } from './theme';
 import { ThemeProvider, useTheme } from './context/themeContext';
+import Privacy from './pages/Privacy';
 
 const { Header, Content, Footer } = Layout;
 const { Title } = Typography;
@@ -47,10 +48,11 @@ const App = () => {
   const menuItems = [
     { key: '/', icon: <HomeOutlined />, label: <Link to="/">Home</Link> },
     { key: '/projects', icon: <ProjectOutlined />, label: <Link to="/projects">Projects</Link> },
-    { key: '/resume', icon: <FileTextOutlined />, label: <Link to="/resume">Resume</Link> },
+    { key: '/resume', icon: <FileDoneOutlined />, label: <Link to="/resume">Resume</Link> },
     { key: '/contact', icon: <MailOutlined />, label: <Link to="/contact">Contact</Link> },
     { key: '/gallery', icon: <PictureOutlined />, label: <Link to="/gallery">Gallery</Link> },
     { key: '/blogs', icon: <BulbOutlined />, label: <Link to="/blogs">Blogs</Link> },
+    { key: '/privacy', icon: <FileTextOutlined />, label: <Link to="/privacy">Privacy</Link> },
   ];
 
   const themeStyles = theme === 'light' ? lightTheme : theme === 'dark' ? darkTheme : purpleTheme;
@@ -114,6 +116,7 @@ const App = () => {
               <Route path="/gallery" element={<PageWrapper><Gallery /></PageWrapper>} />
               <Route path="/project/:projectId" element={<PageWrapper><ProjectDetail /></PageWrapper>} />
               <Route path="/story" element={<PageWrapper><StoryTime /></PageWrapper>} />
+              <Route path="/privacy" element={<PageWrapper><Privacy /></PageWrapper>} />
             </Routes>
           </AnimatePresence>
         {/* </div> */}

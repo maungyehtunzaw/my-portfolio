@@ -48,7 +48,7 @@ const projectsData = [
     company: 'Career-Tech Japan'
   },
     {
-      id: 3,
+      id: 103,
       title: 'Moe Nat Min C2C',
       description: 'Customer to Customer Product Selling Buying Website. implement with CakePHP Framework, Admin CMS, User CMS, and Mobile App API.',
       category: 'Web Development',
@@ -194,14 +194,14 @@ const projectsData = [
       description: 'Thai learning app in difference language, localizations, sentences, conversation and vocabularies.',
       category: 'App Development',
       tags: ['Flutter', 'Provider','Sharepreferences'],
-      mainImage:require('../assets/projects/mmpv.png'),
+      mainImage:require('../assets/projects/learn-thai.png'),
       webSite: 'https://play.google.com/store/apps/details?id=yehtun.com.quick_learn_th',
       images: [
         '/path/to/main/mobile-app-main.jpg',
         '/path/to/secondary/mobile-app-1.jpg',
         '/path/to/secondary/mobile-app-2.jpg'
       ],
-      time: 'Jul 2022 - Nov 2022',
+      time: 'Jun 2024 - Aug 2024',
       company: 'Freelance'
     },
     {
