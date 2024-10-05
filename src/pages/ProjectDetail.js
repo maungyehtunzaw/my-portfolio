@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Typography, Carousel, Image, Tag, Card } from 'antd';
-import projectsData from '../data/project_data';  // Import the projects data
+import projectsData from '../data/projectData';  // Import the projects data
 
 const { Title, Paragraph } = Typography;
 

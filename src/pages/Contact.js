@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Row, Col, Card, Typography, Form, Input, Button, Space, message } from 'antd';
 import { MailOutlined, PhoneOutlined, HomeOutlined, GithubOutlined, LinkedinOutlined } from '@ant-design/icons';
 
-const { Title, Paragraph } = Typography;
+const { Title } = Typography;
 
 function Contact() {
   const [form] = Form.useForm();
@@ -44,6 +44,7 @@ function Contact() {
           </Card>
         </Col>
         <Col xs={24} sm={24} md={12} lg={16}>
+        <Title level={3}>Send me a message from</Title>
           <Card title="Contact Form" bordered={false}>
             <Form
               form={form}
@@ -61,6 +62,7 @@ function Contact() {
               <Form.Item
                 name="email"
                 label="Email"
+              
                 rules={[
                   { required: true, message: 'Please enter your email!' },
                   { type: 'email', message: 'Please enter a valid email!' },

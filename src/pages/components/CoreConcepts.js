@@ -7,7 +7,7 @@ const CoreConceptSection = (props) => {
       <Row justify="center" gutter={[16, 16]}>
        
           {coreConceptData.map((data) => (
-            <Col xs={24} sm={24} md={12} lg={6}>
+            <Col xs={24} sm={24} md={12} lg={6} key={data.id}>
              <CoreConcept key={data.id} {...data}/>
             </Col>
           ))}

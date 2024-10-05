@@ -48,7 +48,7 @@ const projectsData = [
     company: 'Career-Tech Japan'
   },
     {
-      id: 103,
+      id: 13,
       title: 'Moe Nat Min C2C',
       description: 'Customer to Customer Product Selling Buying Website. implement with CakePHP Framework, Admin CMS, User CMS, and Mobile App API.',
       category: 'Web Development',
@@ -210,6 +210,55 @@ const projectsData = [
       description: 'A sample picture dictionary, with playable game, and quiz for childrens',
       category: 'App Development',
       tags: ['Flutter', 'Firebase'],
+      mainImage:require('../assets/projects/mmpicture.png'),
+      webSite:'https://play.google.com/store/apps/details?id=yehtun.com.mmpicture',
+      images: [
+        '/path/to/main/mobile-app-main.jpg',
+        '/path/to/secondary/mobile-app-1.jpg',
+        '/path/to/secondary/mobile-app-2.jpg'
+      ],
+      time: 'Jul 2022 - Nov 2022',
+      company: 'Freelance'
+    },
+    {
+      id: 15,
+      title: 'Hotel System',
+      description: 'Guesthouse, Hotel booking system',
+      category: 'Web Application',
+      tags: ['Laravel', 'React','InertiaJs'],
+      mainImage:require('../assets/projects/mmpicture.png'),
+      webSite:'https://play.google.com/store/apps/details?id=yehtun.com.mmpicture',
+      images: [
+        '/path/to/main/mobile-app-main.jpg',
+        '/path/to/secondary/mobile-app-1.jpg',
+        '/path/to/secondary/mobile-app-2.jpg'
+      ],
+      time: 'Jul 2022 - Nov 2022',
+      company: 'Freelance'
+    },
+
+    {
+      id: 16,
+      title: 'HR Management',
+      description: 'Guesthouse, Hotel booking system',
+      category: 'Web Application',
+      tags: ['Laravel', 'React','InertiaJs'],
+      mainImage:require('../assets/projects/mmpicture.png'),
+      webSite:'https://play.google.com/store/apps/details?id=yehtun.com.mmpicture',
+      images: [
+        '/path/to/main/mobile-app-main.jpg',
+        '/path/to/secondary/mobile-app-1.jpg',
+        '/path/to/secondary/mobile-app-2.jpg'
+      ],
+      time: 'Jul 2022 - Nov 2022',
+      company: 'Freelance'
+    },
+    {
+      id: 17,
+      title: 'Gold & Jwellery System',
+      description: 'Guesthouse, Hotel booking system',
+      category: 'Web Application',
+      tags: ['Laravel', 'React','InertiaJs'],
       mainImage:require('../assets/projects/mmpicture.png'),
       webSite:'https://play.google.com/store/apps/details?id=yehtun.com.mmpicture',
       images: [

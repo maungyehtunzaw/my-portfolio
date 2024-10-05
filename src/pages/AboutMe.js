@@ -1,11 +1,15 @@
 import React from 'react';
 import { Row, Col, Image, Button } from 'antd';
 import { LinkedinFilled, GithubFilled, MailOutlined } from '@ant-design/icons';
-import { Typography, Card } from 'antd';
-
-const { Title, Paragraph } = Typography;
+import { Typography } from 'antd';
+import styled from 'styled-components';
+const { Paragraph } = Typography;
 
 function AboutMe() {
+  const MyNameTitle =styled.h1`
+  color: 'red';
+  font-size: 2.5rem;
+  font-weight: 600;`
   return (
     <div className="about-section">
       <Row align="middle" justify="center" gutter={16}>
@@ -18,7 +22,7 @@ function AboutMe() {
           />
         </Col>
         <Col xs={24} sm={24} md={12} lg={16}>
-          <h1>Hi, I'm Ye Htun Zaw</h1>
+          <MyNameTitle>Hi, I'm Ye Htun Zaw</MyNameTitle>
           <Paragraph>
             I'm a Full-Stack Web Developer and Android App Developer with extensive experience in developing high-quality web and mobile applications. I specialize in HTML, CSS, JavaScript, PHP, MySQL, and more. I am passionate about building responsive, user-centric solutions that solve real-world problems.
           </Paragraph>

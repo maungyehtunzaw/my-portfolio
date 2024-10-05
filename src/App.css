@@ -128,3 +128,8 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+.center-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

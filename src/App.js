@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import { Routes, Route, Link,useLocation } from 'react-router-dom';
-import { Layout, Menu, Drawer, Button,Typography} from 'antd';
-import { FileDoneOutlined,PictureOutlined, HomeOutlined, ProjectOutlined, FileTextOutlined, MailOutlined, BulbOutlined, AppstoreTwoTone ,FacebookFilled,InstagramFilled,YoutubeFilled,GithubFilled,LinkedinFilled } from '@ant-design/icons';
+import { Layout, Menu, Drawer, Button,Typography, Switch} from 'antd';
+import { MoonOutlined,SunOutlined,PictureOutlined, HomeOutlined, ProjectOutlined, FileTextOutlined, MailOutlined, BulbOutlined, AppstoreTwoTone ,FacebookFilled,InstagramFilled,YoutubeFilled,GithubFilled,LinkedinFilled } from '@ant-design/icons';
 import AboutMe from './pages/AboutMe';
 import Projects from './pages/Projects';
 import Resume from './pages/Resume';
@@ -48,12 +48,18 @@ const App = () => {
   const menuItems = [
     { key: '/', icon: <HomeOutlined />, label: <Link to="/">Home</Link> },
     { key: '/projects', icon: <ProjectOutlined />, label: <Link to="/projects">Projects</Link> },
-    { key: '/resume', icon: <FileDoneOutlined />, label: <Link to="/resume">Resume</Link> },
-    { key: '/contact', icon: <MailOutlined />, label: <Link to="/contact">Contact</Link> },
+    { key: '/resume', icon: <FileTextOutlined />, label: <Link to="/resume">Resume</Link> },
+    // { key: '/contact', icon: <MailOutlined />, label: <Link to="/contact">Contact</Link> },
     { key: '/gallery', icon: <PictureOutlined />, label: <Link to="/gallery">Gallery</Link> },
     { key: '/blogs', icon: <BulbOutlined />, label: <Link to="/blogs">Blogs</Link> },
     { key: '/privacy', icon: <FileTextOutlined />, label: <Link to="/privacy">Privacy</Link> },
   ];
+
+  const transformedMenuItems = menuItems.map(item => ({
+    key: item.key,
+    icon: item.icon,
+    label: item.label
+  }));
 
   const themeStyles = theme === 'light' ? lightTheme : theme === 'dark' ? darkTheme : purpleTheme;
 
@@ -74,13 +80,14 @@ const App = () => {
             Ye Htun Z
           </div>
         </Link>
-        <Menu theme="dark" mode="horizontal" selectedKeys={[selectedKey]} className="desktop-menu" style={{ backgroundColor: themeStyles.primaryColor }}>
-          {menuItems.map((item) => (
-            <Menu.Item key={item.key} icon={item.icon}>
-              {item.label}
-            </Menu.Item>
-          ))}
-        </Menu>
+        <Menu
+  theme="dark"
+  mode="horizontal"
+  selectedKeys={[selectedKey]}
+  className="desktop-menu"
+  style={{ backgroundColor: themeStyles.primaryColor }}
+  items={transformedMenuItems}
+/>
         {/* <div> */}
           {/* <Switch checked={theme === 'dark'} onChange={() => toggleTheme(theme === 'dark' ? 'light' : 'dark')} /> Dark Mode
           <Switch checked={theme === 'purple'} onChange={() => toggleTheme(theme === 'purple' ? 'light' : 'purple')} /> Purple Mode */}
@@ -94,12 +101,14 @@ const App = () => {
         {/* </div> */}
         <Button className="mobile-menu-button" type="primary" onClick={showDrawer} icon={<AppstoreTwoTone />} />
         <Drawer title="Ye Htun Z" placement="right" closable={true} onClose={closeDrawer} open={drawerVisible}>
-          <Menu mode="inline" selectedKeys={[selectedKey]}>
-            {menuItems.map((item) => (
+          <Menu mode="inline" selectedKeys={[selectedKey]} items={
+             menuItems.map((item) => (
               <Menu.Item key={item.key} icon={item.icon} onClick={handleMenuClick}>
                 {item.label}
               </Menu.Item>
-            ))}
+            ))
+          }>
+           
           </Menu>
         </Drawer>
       </Header>
@@ -121,19 +130,79 @@ const App = () => {
           </AnimatePresence>
         {/* </div> */}
       </Content>
-      <Footer className="footer" style={{ textAlign: 'center', marginTop: 20, borderRadius: 30, backgroundColor:themeStyles.backgroundColor  }} theme="dark">
-        <div className="footer-content" style={{ textAlign: 'left', padding: 20, color: themeStyles.textColor,backgroundColor: themeStyles.primaryColor }}>
-          <Title level={3}>Connect with me:</Title>
-          <Button type="link" icon={<GithubFilled style={{ fontSize: '30px', color: themeStyles.textColor }} />} href="https://github.com/maungyehtunzaw" target="_blank" />
-          <Button type="link" icon={<LinkedinFilled style={{ fontSize: '30px', color: themeStyles.textColor }} />} href="https://www.linkedin.com/in/yehtunz/" target="_blank" />
-          <Button type="link" icon={<InstagramFilled style={{ fontSize: '30px', color: themeStyles.textColor }} />} href="https://instagram.com/maungyehtunzaw" target="_blank" />
-          <Button type="link" icon={<FacebookFilled style={{ fontSize: '30px', color: themeStyles.textColor }} />} href="https://fb.com/maungyehtunzaw" target="_blank" />
-          <Button type="link" icon={<YoutubeFilled style={{ fontSize: '30px', color: themeStyles.textColor }} />} href="https://www.linkedin.com/in/yehtunz/" target="_blank" />
-        </div>
-        <div className="footer-content" style={{ textAlign: 'left', backgroundColor: '#000', padding: '20px', color: 'white' }}>
-          All rights reserved  ©{new Date().getFullYear()} Ye Htun Z ©2024
-        </div>
-      </Footer>
+      <Footer
+  className="footer"
+  style={{
+    textAlign: 'center',
+    marginTop: 20,
+    padding: '40px 20px',
+    borderRadius: 30,
+    backgroundColor: themeStyles.backgroundColor,
+    boxShadow: '0 8px 16px rgba(0, 0, 0, 0.1)',
+  }}
+  theme="dark"
+>
+  <div
+    className="footer-content"
+    style={{
+      padding: '20px',
+      color: themeStyles.textColor,
+      backgroundColor: themeStyles.primaryColor,
+      borderRadius: '20px',
+      textAlign: 'center',
+    }}
+  >
+    <Title level={3} style={{ color: themeStyles.textColor }}>
+      Connect with me:
+    </Title>
+    <div style={{ marginBottom: '20px' }}>
+      <Button
+        type="link"
+        icon={<GithubFilled style={{ fontSize: '30px', color: themeStyles.textColor }} />}
+        href="https://github.com/maungyehtunzaw"
+        target="_blank"
+      />
+      <Button
+        type="link"
+        icon={<LinkedinFilled style={{ fontSize: '30px', color: themeStyles.textColor }} />}
+        href="https://www.linkedin.com/in/yehtunz/"
+        target="_blank"
+      />
+      <Button
+        type="link"
+        icon={<InstagramFilled style={{ fontSize: '30px', color: themeStyles.textColor }} />}
+        href="https://instagram.com/maungyehtunzaw"
+        target="_blank"
+      />
+      <Button
+        type="link"
+        icon={<FacebookFilled style={{ fontSize: '30px', color: themeStyles.textColor }} />}
+        href="https://fb.com/maungyehtunzaw"
+        target="_blank"
+      />
+      <Button
+        type="link"
+        icon={<YoutubeFilled style={{ fontSize: '30px', color: themeStyles.textColor }} />}
+        href="https://www.youtube.com/channel/yourchannel"
+        target="_blank"
+      />
+    </div>
+  </div>
+
+  <div
+    className="footer-bottom"
+    style={{
+      textAlign: 'center',
+      backgroundColor: '#000',
+      padding: '20px',
+      color: 'white',
+      borderRadius: '20px',
+      marginTop: '20px',
+    }}
+  >
+    <p style={{ margin: 0 }}>All rights reserved © {new Date().getFullYear()} Ye Htun Z</p>
+  </div>
+</Footer>
     </Layout>
   );
 };

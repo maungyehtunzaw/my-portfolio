@@ -18,7 +18,7 @@ import {
       email: 'maungyehtunzaw@gmail.com',
       phone: '+855 0973564 596,+95 097432 77 69',
       address: '123 Main Street, Yangon, Myanmar',
-      linkedIn: 'https://www.linkedin.com/in/yehtunzaw/',
+      linkedIn: 'https://www.linkedin.com/in/yehtunz/',
       github: 'https://github.com/maungyehtunzaw',
       icons: {
         email: <MailOutlined />,
@@ -58,7 +58,7 @@ import {
         degree: 'Full-Stack Js Course',
         startYear: '2018',
         endYear: '2013',
-        description: 'Fucll-Stack development with JavaScript.',
+        description: 'Full-Stack development with JavaScript.',
         icon: <CheckCircleOutlined />
       }
     ],
@@ -104,7 +104,58 @@ import {
         icon: <CodeOutlined />
       }
     ],
-    skills: ['HTML', 'CSS', 'JavaScript', 'React','Vue','Node.js', 'PHP', 'Laravel', 'CakePHP','MySQL', 'Flutter', 'Kotlin']
+    skills: ['HTML', 'CSS', 'JavaScript', 'React','Vue','Node.js', 'PHP', 'Laravel', 'CakePHP','MySQL', 'Flutter', 'Kotlin','Go Lang'],
+    myskills: [
+      {
+        name: "Problem Solving",
+        description: ""
+      },
+      {
+        name: "Communication",
+        description: ""
+      },
+      {
+        name: "Teamwork",
+        description: ""
+      },
+      {
+        name: "Adaptability",
+        description: ""
+      },
+      {
+        name: "Time Management",
+        description: ""
+      }
+    ],
+    skillLogos:{
+      HTML: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg',
+      CSS: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg',
+      JavaScript: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png',
+      React: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
+      Vue: 'https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg',
+      'Node.js': 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg',
+      PHP: 'https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg',
+      Laravel: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg',
+      CakePHP: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Cakephp_logo.svg/1200px-Cakephp_logo.svg.png',
+      MySQL: 'https://upload.wikimedia.org/wikipedia/commons/0/0a/MySQL_textlogo.svg',
+      Flutter: 'https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png',
+      Kotlin: 'https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png',
+      'Go Lang': 'https://upload.wikimedia.org/wikipedia/commons/0/05/Go_Logo_Blue.svg'
+    },
+    skillData:[
+      { skill: 'HTML', logo: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg', percent: 90 },
+      { skill: 'CSS', logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg', percent: 85 },
+      { skill: 'JavaScript', logo: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png', percent: 80 },
+      { skill: 'React', logo: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg', percent: 75 },
+      { skill: 'Vue', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg', percent: 70 },
+      { skill: 'Node.js', logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg', percent: 85 },
+      { skill: 'PHP', logo: 'https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg', percent: 80 },
+      { skill: 'Laravel', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg', percent: 75 },
+      { skill: 'MySQL', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/0a/MySQL_textlogo.svg', percent: 80 },
+      { skill: 'Flutter', logo: 'https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png', percent: 70 },
+      { skill: 'Go Lang', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Go_Logo_Blue.svg', percent: 65 },
+    ],
+    
   };
   
   export default resumeData;

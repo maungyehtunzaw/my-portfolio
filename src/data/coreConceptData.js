@@ -1,36 +1,43 @@
-import {AppstoreOutlined, CodeOutlined, ProfileOutlined, BookOutlined} from '@ant-design/icons';
-const coreConceptData = [
+import { AppstoreOutlined, CodeOutlined, FileTextOutlined, ReadOutlined } from '@ant-design/icons';
+import BlogImage from '../assets/icon/blog.png';
+import CareerImage from '../assets/icon/programmer.png';
+import PortfolioImage from '../assets/icon/portfolio.png';
+import ResumeImage from '../assets/icon/cv.png';
+const projectsData = [
     {
         id: 1,
-        title: 'Work & Projects',
-        description: 'Some of the things I\'ve developed',
-        image: 'AppstoreOutlined',
-        icon:<AppstoreOutlined style={{ fontSize: '48px', color: '#1890ff', textAlign: 'center', padding: '20px' }}/>,
+        title: 'Portfolio',
+        description: 'A showcase of my professional projects and achievements.',
+        icon: <AppstoreOutlined  />,
         link: '/projects',
+        iconImage: PortfolioImage,
+        ribbonText: 'Hippies',
+        ribbonColor: 'purple',
     },
     {
         id: 2,
-        title: 'Developer Story',
-        description: 'My career timeline as a developer.',
-        image: 'CodeOutlined',
-        icon:<CodeOutlined style={{ fontSize: '48px', color: '#1890ff', textAlign: 'center', padding: '20px' }}/>,
+        title: 'Career Journey',
+        description: 'A detailed timeline of my career milestones and experiences.',
+        icon: <CodeOutlined/>,
         link: '/story',
+        iconImage: CareerImage,
     },
     {
         id: 3,
-        title: 'Resume',
-        description: 'Just a summary for you to see.',
-        image: 'ProfileOutlined',
-        icon:<ProfileOutlined style={{ fontSize: '48px', color: '#1890ff', textAlign: 'center', padding: '20px' }}/>,
+        title: 'Professional Resume',
+        description: 'An overview of my skills, education, and work experience.',
+        icon: <FileTextOutlined/>,
         link: '/resume',
+        iconImage: ResumeImage,
     },
     {
         id: 4,
-        title: 'Blogs',
-        description: 'I\'m planning to start a blog.',
-        image: 'BookOutlined',
-        icon:<BookOutlined style={{ fontSize: '48px', color: '#1890ff', textAlign: 'center', padding: '20px' }}/>,
+        title: 'Tech Blog',
+        description: 'Insights, tutorials, and thoughts on technology and coding.',
+        icon: <ReadOutlined />,
         link: '/blogs',
+        iconImage: BlogImage,
     },
 ];
-export default coreConceptData;
+
+export default projectsData;
