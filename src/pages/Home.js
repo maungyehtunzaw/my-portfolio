@@ -7,6 +7,7 @@ import { useTheme } from '../context/themeContext';
 import CoreConceptSection from './components/CoreConcepts';
 import styled from 'styled-components';
 import { cardStyle, cardStyle2, cardStyle3, cardStyle4, iconStyle } from '../data/styles';
+import { TypeAnimation } from 'react-type-animation';
 const { Title, Paragraph } = Typography;
 const MyNameTitle =styled.h1`
 color: blue;
@@ -22,19 +23,38 @@ function Home() {
     <section className="home-section">
       <Row align="middle" justify="center" gutter={16}>
         <Col xs={24} sm={24} md={12} lg={8}>
-          <Badge.Ribbon text="Hippies" color="pink">
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
+          <Badge.Ribbon text="Zippzy" color="pink">
             <Image
-              width="100%"
+              width="50%"
               src={logoImage}
               alt="Ye Htun Z"
               preview={false}
               style={{ borderRadius: '50%', border: `3px solid ${theme.cardBackgroundColor}` }}
             />
           </Badge.Ribbon>
+          </div>
         </Col>
         <Col xs={24} sm={24} md={12} lg={16}>
           {/* <Title style={{ color: theme.textColor }}>Hi, I'm Ye {theme.textColor} Htun Zaw</Title> */}
-          <MyNameTitle>Hi, I'm Ye Htun Zaw</MyNameTitle>
+          <TypeAnimation
+          style={{fontSize:"2.1rem",color:"purple",letterSpacing:"10px"}}
+      sequence={[
+        // Same substring at the start will only be typed out once, initially
+        "I'm Ye Htun Z, I Develop",
+        1000, // wait 1s before replacing "Mice" with "Hamsters"
+        "I'm Ye Htun Z, I Code",
+        1000,
+        "I'm Ye Htun Z, I Design",
+        1000,
+        "I'm Ye Htun Z, I make Impact",
+        1000
+      ]}
+      wrapper="span"
+      speed={50}
+      // style={{ fontSize: '2em', display: 'inline-block' }}
+      repeat={Infinity}
+    />
           <Paragraph>
             <Typography.Title level={4} style={{ color: theme.textColor }}>
               I'm a Full-Stack Web Developer, PHP, NodeJs, React, Vue and Flutter with extensive experience in developing high-quality web and mobile applications. 
@@ -56,8 +76,8 @@ function Home() {
       </Row>
     </section>
     <section style={{ padding: '20px'}}>
-      <Divider type="horizontal" orientation="center" orientationMargin={20}>
-        <Title level={3} style={{ textTransform: 'uppercase', color: '#333' }}>Skill-Set</Title>
+      <Divider type="horizontal" orientation="center">
+        SKILLS SET
       </Divider>
       
       <Row gutter={[16, 16]} justify="space-around">
@@ -101,7 +121,7 @@ function Home() {
       </Row>
     </section>
     <Divider type="horizontal" orientation="center" orientationMargin={20}>
-      <Title level={3} style={{ textTransform:'uppercase'}}>Story, Work and Blogs</Title>
+       <h4>Story, Work and Blogs</h4>
     </Divider>
     <CoreConceptSection/>
     

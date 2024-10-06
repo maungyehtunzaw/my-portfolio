@@ -1,4 +1,5 @@
 const galleryData = [
+    {id:11,title:"NITS product lunch",imageUrl:require('../assets/gallery/nitsnov.jpg')},
     { id: 1, title: 'Donation with Kanlinlat Members', imageUrl: require('../assets/gallery/kll.JPG') },
     { id: 2, title: 'Flower donation at Shwedagon Pagoda', imageUrl: require('../assets/gallery/kkl2.jpeg') },
     { id: 3, title: 'Donation to orpans', imageUrl: require('../assets/gallery/kll3.jpeg') },

@@ -17,7 +17,7 @@ const projectsData = [
   },
   {
     id: 2,
-    title: 'Career Tech Japan',
+    title: 'Career Tech Japan ',
     description: 'Admin panel for traninee management,Interview Process record, Personal TEST, and Comapny Section , to hired the trainee. implement with Laravel 5.8 Framework.',
     category: 'Web Development',
     tags: ['Laravel','JQuery','Datatables','MySQL'],
@@ -33,7 +33,7 @@ const projectsData = [
   },
   {
     id: 3,
-    title: 'Jpro Myanmar',
+    title: 'Jpro Myanmar Job Website',
     description: 'A Jobseeker platform for job search, employer dashboard,admin dashboard, jobseeker dashboard, point system',
     category: 'Web Development',
     tags: ['Laravel','VueJs','InertiaJs','NuxtJs','MySQL'],
@@ -80,7 +80,7 @@ const projectsData = [
     {
       id: 5,
       title: 'Beauty & Luxury',
-      description: 'This website is for information website available products and services.implement with CiBootstrap Backend using CI Framework..',
+      description: 'This website is for information website available products and services.implement with Backend using CI Framework..',
       category: 'Web Development',
       tags: ['CodeIgniter', 'PHP', 'jQuery','MySQL'],
       mainImage:require('../assets/projects/bnu.png'),
@@ -157,6 +157,22 @@ const projectsData = [
       company: 'Career-Tech Japan'
     },
     {
+      id: 19,
+      title: 'Luckydraw system for Emplyoee',
+      description: 'Generating lucky tickets, draws and random winners, by workings experiences, by positions, backend api and draw systems',
+      category: 'Web Application',
+      tags: ['Laravel','AdminLte','Ajax','jQuery','RestAPI'],
+      mainImage:require('../assets/projects/luckydraw2.png'),
+      webSite:'https://play.google.com/store/apps/details?id=com.japanready.jrfapp',
+      images: [
+        '/path/to/main/mobile-app-main.jpg',
+        '/path/to/secondary/mobile-app-1.jpg',
+        '/path/to/secondary/mobile-app-2.jpg'
+      ],
+      time: 'July 2022',
+      company: 'Career-Tech Japan'
+    },
+    {
       id: 10,
       title: 'Golden Trivia Quiz App',
       description: 'My first app with flutter, testing quiz with local data.',
@@ -223,10 +239,10 @@ const projectsData = [
     {
       id: 15,
       title: 'Hotel System',
-      description: 'Guesthouse, Hotel booking system',
+      description: 'Guesthouse, Hotel booking system, Reservation',
       category: 'Web Application',
       tags: ['Laravel', 'React','InertiaJs'],
-      mainImage:require('../assets/projects/mmpicture.png'),
+      mainImage:require('../assets/projects/hotel.png'),
       webSite:'https://play.google.com/store/apps/details?id=yehtun.com.mmpicture',
       images: [
         '/path/to/main/mobile-app-main.jpg',
@@ -240,11 +256,11 @@ const projectsData = [
     {
       id: 16,
       title: 'HR Management',
-      description: 'Guesthouse, Hotel booking system',
+      description: 'Attendance, leave, payroll hr system ',
       category: 'Web Application',
       tags: ['Laravel', 'React','InertiaJs'],
-      mainImage:require('../assets/projects/mmpicture.png'),
-      webSite:'https://play.google.com/store/apps/details?id=yehtun.com.mmpicture',
+      mainImage:require('../assets/projects/mmhr.png'),
+      webSite:'hr.yehtun.com',
       images: [
         '/path/to/main/mobile-app-main.jpg',
         '/path/to/secondary/mobile-app-1.jpg',
@@ -261,6 +277,22 @@ const projectsData = [
       tags: ['Laravel', 'React','InertiaJs'],
       mainImage:require('../assets/projects/mmpicture.png'),
       webSite:'https://play.google.com/store/apps/details?id=yehtun.com.mmpicture',
+      images: [
+        '/path/to/main/mobile-app-main.jpg',
+        '/path/to/secondary/mobile-app-1.jpg',
+        '/path/to/secondary/mobile-app-2.jpg'
+      ],
+      time: 'Jul 2022 - Nov 2022',
+      company: 'Freelance'
+    },
+    {
+      id: 18,
+      title: 'Green Circle',
+      description: 'Product Showcase & ordering',
+      category: 'Web Application',
+      tags: ['CakePHP', 'jQuery','Full-stack'],
+      mainImage:require('../assets/projects/greencircle.png'),
+      webSite:'greencirclemm.com',
       images: [
         '/path/to/main/mobile-app-main.jpg',
         '/path/to/secondary/mobile-app-1.jpg',
