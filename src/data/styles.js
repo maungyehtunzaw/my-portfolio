@@ -12,7 +12,8 @@ export const cardStyle = {
   
   export const cardStyle2 = {
     ...cardStyle,
-    background: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
+    // background: '#ff00cc',
+    background: 'linear-gradient(to right, #ff00cc, #333399)',
   };
   
   export const cardStyle3 = {

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { Row, Col, Card, Typography, Form, Input, Button, Space, message } from 'antd';
 import { MailOutlined, PhoneOutlined, HomeOutlined, GithubOutlined, LinkedinOutlined } from '@ant-design/icons';
 
@@ -21,17 +21,17 @@ function Contact() {
       <Title level={2} align="center">Contact</Title>
       <Row gutter={[16, 16]}>
         <Col xs={24} sm={24} md={12} lg={8}>
-          <Card title="Address" bordered={false} style={{ marginBottom: 16 }}>
+          <Card title="Address" bordered="false" style={{ marginBottom: 16 }}>
             <Space direction="vertical">
               <HomeOutlined /> 123 Main Street, Yangon, Myanmar
             </Space>
           </Card>
-          <Card title="Phone" bordered={false} style={{ marginBottom: 16 }}>
+          <Card title="Phone" bordered="false" style={{ marginBottom: 16 }}>
             <Space direction="vertical">
               <PhoneOutlined /> +95 123 456 789
             </Space>
           </Card>
-          <Card title="Social" bordered={false} style={{ marginBottom: 16 }}>
+          <Card title="Social" bordered="false" style={{ marginBottom: 16 }}>
             <Space direction="vertical">
               <MailOutlined /> yehtunzaw@example.com
               <a href="https://www.linkedin.com/in/yehtunzaw/">
@@ -45,7 +45,7 @@ function Contact() {
         </Col>
         <Col xs={24} sm={24} md={12} lg={16}>
         <Title level={3}>Send me a message from</Title>
-          <Card title="Contact Form" bordered={false}>
+          <Card title="Contact Form" bordered="false">
             <Form
               form={form}
               layout="vertical"

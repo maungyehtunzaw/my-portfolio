@@ -1,18 +1,18 @@
 import React from 'react';
-import { Row, Col, Image, Button, Divider, Badge, Flex } from 'antd';
+import { Row, Col, Image, Button, Divider, Flex } from 'antd';
 import { LinkedinFilled, GithubFilled, MailOutlined, DesktopOutlined, SketchOutlined, ToolOutlined, CodeOutlined } from '@ant-design/icons';
 import { Typography } from 'antd';
-import logoImage from '../assets/logo/yehtunz.JPG';
+import logoImage from '../assets/logo/yehtunz.jpeg';
 import { useTheme } from '../context/themeContext';
 import CoreConceptSection from './components/CoreConcepts';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import { cardStyle, cardStyle2, cardStyle3, cardStyle4, iconStyle } from '../data/styles';
 import { TypeAnimation } from 'react-type-animation';
 const { Title, Paragraph } = Typography;
-const MyNameTitle =styled.h1`
-color: blue;
-font-size: 2.5rem;
-font-weight: 600;`
+// const MyNameTitle =styled.h1`
+// color: blue;
+// font-size: 2.5rem;
+// font-weight: 600;`
  //no ' " for value ?"
 function Home() {
   const { theme } = useTheme();
@@ -21,19 +21,22 @@ function Home() {
     
     <div style={{ backgroundColor: theme.backgroundColor, color: theme.textColor, padding: '20px' }}>
     <section className="home-section">
-      <Row align="middle" justify="center" gutter={16}>
+      <Row align="middle" justify="right" gutter={16}>
         <Col xs={24} sm={24} md={12} lg={8}>
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
-          <Badge.Ribbon text="Zippzy" color="pink">
-            <Image
+        <Flex style={{marginRight:"20px"}} justify='center' align='center'>
+       
+          {/* <Badge.Ribbon text="Zippzy" color="pink"> */}
+          <Image
               width="50%"
               src={logoImage}
               alt="Ye Htun Z"
               preview={false}
-              style={{ borderRadius: '50%', border: `3px solid ${theme.cardBackgroundColor}` }}
+              bordered="true"
+              style={{ borderRadius: '50%', border: '3px inset #000' }}
             />
-          </Badge.Ribbon>
-          </div>
+          {/* </Badge.Ribbon> */}
+         
+          </Flex>
         </Col>
         <Col xs={24} sm={24} md={12} lg={16}>
           {/* <Title style={{ color: theme.textColor }}>Hi, I'm Ye {theme.textColor} Htun Zaw</Title> */}
@@ -47,8 +50,6 @@ function Home() {
         1000,
         "I'm Ye Htun Z, I Design",
         1000,
-        "I'm Ye Htun Z, I make Impact",
-        1000
       ]}
       wrapper="span"
       speed={50}
@@ -66,7 +67,7 @@ function Home() {
               I am currently looking for new opportunities to work on exciting projects. If you have a project in mind or want to collaborate, feel free to get in touch.
             </Typography.Title>
           </Paragraph> */}
-          <Title level={3} style={{ color: theme.textColor }}>Connect with me</Title>
+          <Title level={3} style={{ color: theme.textColor }}>Get in Contact</Title>
           <Paragraph>
             <Button ghost type="primary" shape="circle" icon={<LinkedinFilled />} href="https://www.linkedin.com/in/yehtunz/" target="_blank" /> &nbsp;
             <Button ghost type="primary" danger shape="circle" icon={<GithubFilled />} href="https://github.com/maungyehtunzaw" target="_blank" /> &nbsp;
@@ -94,9 +95,9 @@ function Home() {
         <Col xs={24} sm={12} md={6}>
           <Flex vertical className="skill-card" style={cardStyle2}>
             <DesktopOutlined style={iconStyle} />
-            <Title level={4} style={{ marginBottom: '10px', color: '#fff' }}>FRONTEND</Title>
-            <p>HTML, CSS, React, Vue</p>
-            <p>Design responsive UI/UX</p>
+            <Title level={4} style={{ marginBottom: '10px', color: '#fff' }}>FRONTEND/ANDROID</Title>
+            <p>HTML, CSS, React, Vue & Flutter</p>
+            <p>Design responsive UI/UX </p>
           </Flex>
         </Col>
 

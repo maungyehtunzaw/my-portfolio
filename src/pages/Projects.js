@@ -102,7 +102,7 @@ function Projects() {
                     {project.title}
                   </div>
                 }
-                bordered={true}
+                bordered="true"
                 cover={
                   <Image
                     src={project.mainImage}

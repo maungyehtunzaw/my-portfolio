@@ -5,23 +5,29 @@ import timelineData from '../data/timelineData';  // Import the timeline data
 const { Title, Paragraph } = Typography;
 
 function StoryTime() {
+  const timelineItems = timelineData.map((item, index) => ({
+    key: index,
+    dot: (
+      <div style={{ fontSize: "30px" }}>
+        {item.icon}
+      </div>
+    ),
+    children: (
+      <Card title={`${item.event} (${item.startYear} - ${item.endYear})`} bordered={true}>
+        <Paragraph>{item.description}</Paragraph>
+        <div>
+          {item.skills.map((skill, idx) => (
+            <Tag key={idx} color="blue">{skill}</Tag>
+          ))}
+        </div>
+      </Card>
+    )
+  }));
+
   return (
     <div>
-      <Title level={2}>How i'am becoming & passing through</Title>
-      <Timeline>
-        {timelineData.map((item, index) => (
-          <Timeline.Item key={index} dot={item.icon}>
-            <Card title={`${item.event} (${item.startYear} - ${item.endYear})`} bordered={false}>
-              <Paragraph>{item.description}</Paragraph>
-              <div>
-                {item.skills.map((skill, idx) => (
-                  <Tag key={idx} color="blue">{skill}</Tag>
-                ))}
-              </div>
-            </Card>
-          </Timeline.Item>
-        ))}
-      </Timeline>
+      <Title level={2}>Journey Through Technology: From Foundations to Expertise</Title>
+      <Timeline items={timelineItems} />
     </div>
   );
 }

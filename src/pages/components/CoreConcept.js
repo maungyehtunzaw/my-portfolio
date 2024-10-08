@@ -5,7 +5,7 @@ export const CoreConcept = ({id,title,description,icon,link,iconImage}) => {
         <Card
             key={id}
             title={<div className="center-title">{title}</div>}
-            bordered={false}
+            bordered="false"
             hoverable
             // style={{ backgroundColor:backColor }}
             onClick={() => window.location.href = link}

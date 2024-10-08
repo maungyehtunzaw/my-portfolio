@@ -272,10 +272,10 @@ const projectsData = [
     {
       id: 17,
       title: 'Gold & Jwellery System',
-      description: 'Guesthouse, Hotel booking system',
+      description: 'Diamond, Gold, Jwellery ERP System',
       category: 'Web Application',
       tags: ['Laravel', 'React','InertiaJs'],
-      mainImage:require('../assets/projects/mmpicture.png'),
+      mainImage:require('../assets/projects/more.png'),
       webSite:'https://play.google.com/store/apps/details?id=yehtun.com.mmpicture',
       images: [
         '/path/to/main/mobile-app-main.jpg',

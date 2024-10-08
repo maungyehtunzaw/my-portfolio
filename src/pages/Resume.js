@@ -5,21 +5,21 @@ import {
   Card,
   Typography,
   List,
-  Tag,
   Space,
   Avatar,
   Button,
   Image,
   Progress,
   Flex,
+  Divider,
 } from "antd";
 import { Fade } from "react-awesome-reveal";
 import resumeData from "../data/resumeData"; // Import the resume data
-import { RobotFilled, RobotOutlined, WalletOutlined } from "@ant-design/icons";
+import { CodeFilled, RobotOutlined, WalletOutlined } from "@ant-design/icons";
 import eduIcon from "../assets/icon/edu.png";
 import expIcon from "../assets/icon/exp.png";
 import myPhoto from "../assets/logo/yehtunz.jpeg";
-const { Title, Paragraph, Text } = Typography;
+const { Title} = Typography;
 const { Meta } = Card;
 
 function Resume() {
@@ -33,7 +33,7 @@ function Resume() {
           <Fade triggerOnce>
             <Card
               // title="Personal Details"
-              bordered={true}
+              bordered
               className="personal-card"
               style={{ textAlign: "center", padding: "20px" }} // Center content and adjust padding
             >
@@ -93,7 +93,9 @@ function Resume() {
               </Space>
             </Card>
 
-            <Card title="Skills" bordered={true} className="skills-card">
+            <Card title={
+              <>Core Strengths & Capabilities</>
+            } bordered="true" className="skills-card">
               <List
                 itemLayout="horizontal"
                 dataSource={resumeData.myskills}
@@ -102,7 +104,7 @@ function Resume() {
                     <List.Item.Meta
                       avatar={<Avatar icon={<WalletOutlined />} />}
                       title={item.name}
-                      description={item.description}
+                      // description={item.description}
                     />
                   </List.Item>
                 )}
@@ -114,7 +116,7 @@ function Resume() {
         <Col xs={24} md={16}>
           <Fade triggerOnce cascade>
             <Card
-              bordered={true}
+              bordered="true"
               style={{ marginBottom: 16 }}
               className="experience-card"
             >
@@ -131,7 +133,7 @@ function Resume() {
                     // style={{border:"2px solid red"}}
                     extra={
                       <img
-                        width={180}
+                        width={120}
                         alt="logo"
                        
                         src={item.logo}
@@ -158,15 +160,14 @@ function Resume() {
               />
             </Card>
             <Card
-              bordered={true}
+              bordered="true"
               className="education-card"
               title={null}
               icon={<WalletOutlined />}
+              style={{ marginBottom: 16 }}
             >
               <div
                 style={{
-                  // background: "red",
-                  // color: "white",
                   padding: "12px",
                   borderRadius: "4px",
                 }}
@@ -202,14 +203,14 @@ function Resume() {
               />
             </Card>
 
-            {/* <Card title="Skills" bordered={true} className="skills-card">
+            {/* <Card title="Skills" bordered="true" className="skills-card">
               {resumeData.skills.map((skill, index) => (
                 <Tag color="blue" key={index} style={{ marginBottom: 8 }}>
                   {skill}
                 </Tag>
               ))}
             </Card> */}
-            {/* <Card title="Skills" bordered={true} className="skills-card">
+            {/* <Card title="Skills" bordered="true" className="skills-card">
               <Space wrap size={[16, 16]} style={{ justifyContent: "center" }}>
                 {resumeData.skills.map((skill, index) => (
                   <Tag
@@ -239,7 +240,13 @@ function Resume() {
               </Space>
             </Card> */}
 
-            <Card title="Skills" bordered={true} className="skills-card">
+            <Card bordered className="skills-card"  style={{ marginBottom: 16 }}>
+            <Meta
+                avatar={<CodeFilled/>}
+                title="Code & Languages"
+                description="I have worked with"
+              />
+             <Divider height={2} border={0} plain={false}/>
               <Space wrap style={{ justifyContent: "center" }}>
                 {resumeData.skillData.map((skillItem, index) => (
                   <div

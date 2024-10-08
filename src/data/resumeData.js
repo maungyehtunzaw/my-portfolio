@@ -132,11 +132,21 @@ import {
     skills: ['HTML', 'CSS', 'JavaScript', 'React','Vue','Node.js', 'PHP', 'Laravel', 'CakePHP','MySQL', 'Flutter', 'Kotlin','Go Lang'],
     myskills: [
       {
+        icon: <CodeOutlined />,
+        name: "Full-Stack Dev",
+      },
+      {
+        icon: <CodeOutlined />,
         name: "Problem Solving",
         description: ""
       },
       {
-        name: "Communication",
+        icon: <CodeOutlined />,
+        name: "Debugging",
+        description: ""
+      },
+      {
+        name: "Can-do attitude",
         description: ""
       },
       {
@@ -144,11 +154,11 @@ import {
         description: ""
       },
       {
-        name: "Adaptability",
-        description: ""
+        name:"Database management",
+        description:""
       },
       {
-        name: "Time Management",
+        name: "Adaptability",
         description: ""
       }
     ],
