@@ -12,6 +12,7 @@ import {
   Progress,
   Flex,
   Divider,
+  Grid,
 } from "antd";
 import { Fade } from "react-awesome-reveal";
 import resumeData from "../data/resumeData"; // Import the resume data
@@ -239,7 +240,7 @@ function Resume() {
                 ))}
               </Space>
             </Card> */}
-
+          
             <Card bordered className="skills-card"  style={{ marginBottom: 16 }}>
             <Meta
                 avatar={<CodeFilled/>}
@@ -264,7 +265,7 @@ function Resume() {
                       alt={`${skillItem.skill} logo`}
                       height={30}
                       preview={false}
-                      style={{ marginBottom: "8px" }}
+                      style={{ marginBottom: "5px" }}
                     />
                     <p>{skillItem.skill}</p>
                     <Progress
